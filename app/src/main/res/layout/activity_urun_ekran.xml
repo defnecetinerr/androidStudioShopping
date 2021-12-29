@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4B00E5FF"
+    tools:context=".urunEkran">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="224dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="35dp"
+        android:text="Ürünü Bilgi Sistemi."
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FF9100"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageSec"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="323dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uruncu" />
+
+    <EditText
+        android:id="@+id/urunAdi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="ürün ismi"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/urunResim"
+        app:layout_constraintTop_toBottomOf="@+id/imageSec" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Ürün Fiyatı"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/urunGiris"
+        app:layout_constraintStart_toStartOf="@+id/urunAdi"
+        app:layout_constraintTop_toBottomOf="@+id/urunAdi" />
+
+    <Button
+        android:id="@+id/urunGiris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="31dp"
+        android:onClick="urunGiris"
+        android:text="ürün giriniz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <ImageView
+        android:id="@+id/urunResim"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="81dp"
+        app:layout_constraintBottom_toBottomOf="@+id/urunAdi"
+        app:layout_constraintEnd_toStartOf="@+id/imageSec"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.956"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/imageSec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="52dp"
+        android:text="resim seçiniz"
+        app:layout_constraintBottom_toTopOf="@+id/urunAdi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/urunResim"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
